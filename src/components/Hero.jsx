@@ -8,13 +8,10 @@ const Hero = () => {
 
   const handleVideoSrcSet =() =>{
 
-    if(window.innerWidth<760)
-    {
-      setVideoSrc(smallHeroVideo)
-    }
-    else{
-
-      setVideoSrc(heroVideo)
+    if(window.innerWidth < 760) {
+      setVideoSrc(smallHeroVideo);
+    } else {
+      setVideoSrc(heroVideo);
     }
 
   }
@@ -50,9 +47,10 @@ gsap.to('#cta',{
 
 <div className="md:w-10/12 w-9/12">
 
-<video className="pointer-events-none" autoPlay muted playsInline={true} key={videoSrc}>
+<video className="pointer-events-none" muted playsInline key={videoSrc}>
   <source src={videoSrc} type="video/mp4"/>
 </video>
+
 </div>
 </div>
 <div id="cta" className="flex flex-col items-center opacity-0 translate-y-20">
